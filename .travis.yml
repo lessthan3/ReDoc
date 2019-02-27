@@ -7,7 +7,7 @@ env:
     - GH_REF: github.com/Rebilly/ReDoc.git
     - GIT_AUTHOR_EMAIL: redoc-bot@users.noreply.github.com
     - GIT_AUTHOR_NAME: RedocBot
-before_deploy: npm run bundle
+script: npm run bundle
 deploy:
   provider: gcs
   access_key_id: access_key_id
