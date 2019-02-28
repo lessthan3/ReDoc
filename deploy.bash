@@ -25,6 +25,6 @@ export BOTO_CONFIG=$(pwd)/.boto
 gsutil version -l
 
 gsutil -m cp -r bundles gs://maestro-developer-documentation-ci-test
-
+gsutil -m acl ch -r -g all:R  gs://maestro-developer-documentation-ci-test 
 rm account.json
 rm .boto
