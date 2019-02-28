@@ -9,12 +9,7 @@ env:
     - GIT_AUTHOR_NAME: RedocBot
 script: npm run bundle
 deploy:
-  provider: gcs
-  access_key_id: access_key_id
-  secret_access_key: secret_access_key
-  bucket: maestro-developer-documentation-ci-test
-  skip_cleanup: true
-  acl: public-read
-  local-dir: bundles
+  provider: script
+  script: bash deploy.bash
   on:
     branch: master
